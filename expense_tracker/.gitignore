@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment (if any)
+venv/
+.env/
+
+# OS files
+.DS_Store
+
+# Charts (optional: remove this line if you WANT charts tracked)
+# data/charts/

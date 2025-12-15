@@ -1,0 +1,19 @@
+{
+    "expenses": [
+        {
+            "id": 1,
+            "date": "2025-12-15",
+            "amount": 120.0,
+            "category": "Food",
+            "note": "pizza"
+        },
+        {
+            "id": 2,
+            "date": "2025-12-15",
+            "amount": 100.0,
+            "category": "Travel",
+            "note": "Uber"
+        }
+    ],
+    "budgets": {}
+}
