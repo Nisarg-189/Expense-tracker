@@ -1,79 +1,60 @@
-# 💰 Expense Tracker with Analytics (Python)
+# 💰 Expense Tracker (Python – JSON Storage)
 
-A **clean, scalable Python expense tracker** that evolves from simple file-based storage to a full SQLite-backed system with **analytics and visualizations**. This project demonstrates real-world software engineering practices including data modeling, persistence layers, and clean architecture.
+A clean, menu‑driven **CLI expense tracker** built with Python that allows users to manage daily expenses, set budgets, and generate spending analytics. The project uses **JSON-based persistence** and follows a **modular, scalable architecture** suitable for real‑world backend extensions.
+
 
 ---
+
 
 ## 🚀 Features
 
-### Core
-
-* Add, edit, delete expenses
-* Expense categories (Food, Travel, Study, Gym, etc.)
-* Notes & date-based entries
-
-### Budgets
-
+* Add, view, and delete expenses
+* Automatic ID reindexing after deletion (no gaps)
+* Expense categorization (Food, Travel, Study, etc.)
 * Monthly budgets per category
-* Overspending alerts
+* Colored terminal interface for better UX
+* Spending analytics with charts saved as images
 
-### Storage (Progressive)
-
-* CSV storage
-* JSON storage
-* SQLite database (production-ready)
-
-### Analytics
-
-* Monthly spending trends
-* Category-wise expense breakdown
-* Budget vs actual spending comparison
 
 ---
 
-## 🧠 What You’ll Learn
 
-* Python data structures & OOP
-* File handling → database migration
-* SQL & SQLite integration
-* Data aggregation & analysis
-* Clean architecture & modular design
-* Data visualization with Matplotlib
-
----
-
-## 🗂️ Project Structure
+## 🗂️ Project Structure (JSON‑Only)
 
 ```
 expense_tracker/
 │
-├── app.py                     # Entry point
+├── app.py
 │
 ├── models/
-│   └── expense.py             # Expense data model
+│   └── expense.py
 │
 ├── services/
-│   ├── expense_service.py     # Expense logic (CRUD)
-│   ├── budget_service.py      # Budget calculations
+│   ├── expense_service.py
+│   └── budget_service.py
 │
 ├── storage/
-│   ├── csv_store.py           # CSV persistence
-│   ├── json_store.py          # JSON persistence
-│   ├── db_store.py            # SQLite persistence
+│   └── json_store.py
 │
 ├── analytics/
-│   └── charts.py              # Data visualization
+│   └── charts.py
 │
 ├── utils/
-│   └── date_utils.py          # Date helpers
+│   └── date_utils.py
 │
-└── data/
-    └── expenses.db            # SQLite database
+├── data/
+│   ├── expenses.json
+│   └── charts/
+│       └── monthly_spending.png
+│
+└── requirements.txt
 ```
+
 
 ---
 
 ## ⚙️ Installation
+
 
 ```bash
 git clone https://github.com/yourusername/expense-tracker-python.git
@@ -81,15 +62,20 @@ cd expense-tracker-python
 pip install -r requirements.txt
 ```
 
-**Dependencies**
+**Requirements**
 
 * Python 3.9+
-* matplotlib
+* colorama
 * pandas
+* matplotlib
+
 
 ---
 
+
 ## ▶️ Usage
+
+Run the application:
 
 ```bash
 python app.py
@@ -97,55 +83,54 @@ python app.py
 
 Menu options:
 
-* Add expense
-* View expenses
-* Edit / delete expense
-* Set monthly budget
-* View analytics
+* Add Expense
+* View Expenses
+* Delete Expense
+* Set Budget
+* Show Analytics
+* Exit
+
+Expenses are stored persistently in `data/expenses.json`.
+
 
 ---
 
-## 📊 Analytics Preview
 
-* 📈 Monthly spending line chart
-* 🥧 Category-wise pie chart
-* 📊 Budget vs actual bar chart
+## 📊 Analytics
 
----
+* Monthly spending trend is generated using Pandas and Matplotlib
+* Charts are **saved as image files** instead of opening GUI windows
+* This ensures compatibility with:
 
-## 🧪 Data Migration Path
+  * GitHub Codespaces
+  * VS Code terminal
+  * Server / headless environments
 
-1. Start with CSV storage
-2. Migrate to JSON for structured data
-3. Upgrade to SQLite for scalability
+Generated charts are stored in:
 
-This mirrors **real-world backend evolution**.
+```
+data/charts/
+```
 
----
+Example:
 
-## 🔮 Future Enhancements
+* `monthly_spending.png`
 
-* User authentication
-* Export reports as PDF
-* REST API using Flask / FastAPI
-* Web or GUI interface
-* Cloud database integration
 
 ---
 
-## 📌 Why This Project Matters
 
-✔ Demonstrates backend thinking
-✔ Shows data → database → analytics flow
-✔ Recruiter-friendly & resume-ready
-✔ Scalable and production-inspired design
+## 🎨 Terminal Experience
 
----
+* Cyan → headers
+* Green → success messages
+* Yellow → warnings
+* Red → errors / exit
 
-## 📜 License
+The colored CLI improves clarity and usability without external UI frameworks.
 
-MIT License
 
 ---
 
-### ⭐ If you find this project useful, consider giving it a star!
+
+⭐ If you find this project useful, feel free to star the repository.
