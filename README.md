@@ -2,7 +2,9 @@
 
 A clean, menu‑driven **CLI expense tracker** built with Python that allows users to manage daily expenses, set budgets, and generate spending analytics. The project uses **JSON-based persistence** and follows a **modular, scalable architecture** suitable for real‑world backend extensions.
 
+
 ---
+
 
 ## 🚀 Features
 
@@ -13,7 +15,9 @@ A clean, menu‑driven **CLI expense tracker** built with Python that allows use
 * Colored terminal interface for better UX
 * Spending analytics with charts saved as images
 
+
 ---
+
 
 ## 🗂️ Project Structure (JSON‑Only)
 
@@ -46,9 +50,11 @@ expense_tracker/
 └── requirements.txt
 ```
 
+
 ---
 
 ## ⚙️ Installation
+
 
 ```bash
 git clone https://github.com/yourusername/expense-tracker-python.git
@@ -63,7 +69,9 @@ pip install -r requirements.txt
 * pandas
 * matplotlib
 
+
 ---
+
 
 ## ▶️ Usage
 
@@ -84,7 +92,9 @@ Menu options:
 
 Expenses are stored persistently in `data/expenses.json`.
 
+
 ---
+
 
 ## 📊 Analytics
 
@@ -106,7 +116,9 @@ Example:
 
 * `monthly_spending.png`
 
+
 ---
+
 
 ## 🎨 Terminal Experience
 
@@ -117,7 +129,9 @@ Example:
 
 The colored CLI improves clarity and usability without external UI frameworks.
 
+
 ---
+
 
 ⭐ If you find this project useful, feel free to star the repository.
 
