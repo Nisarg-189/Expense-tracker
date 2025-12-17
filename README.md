@@ -134,3 +134,4 @@ The colored CLI improves clarity and usability without external UI frameworks.
 
 
 ⭐ If you find this project useful, feel free to star the repository.
+
