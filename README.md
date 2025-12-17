@@ -57,7 +57,7 @@ expense_tracker/
 
 
 ```bash
-git clone https://github.com/yourusername/expense-tracker-python.git
+git clone https://github.com/Nisarg-189/expense-tracker-python.git
 cd expense-tracker-python
 pip install -r requirements.txt
 ```
